@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/lahyri/VLAD/command"
+	"github.com/lahyri/Wyvern/command"
 
 	"github.com/bwmarrin/discordgo"
 )
