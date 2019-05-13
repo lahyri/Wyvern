@@ -7,7 +7,7 @@ import (
 	"syscall"
 
 	"github.com/bwmarrin/discordgo"
-	"github.com/lahyri/VLAD/handler"
+	"github.com/lahyri/Wyvern/handler"
 	"github.com/subosito/gotenv"
 )
 
