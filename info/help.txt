@@ -1,0 +1,4 @@
+Wyvern is a Discord Bot specially crafted as a D&D compendium/helper
+
+--- Commands ---
+    -- !r N X B      - generates N random rolls of a X-sided dice and adds the bonus b to the sum of the results (NdX + B)
