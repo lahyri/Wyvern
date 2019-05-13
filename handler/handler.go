@@ -32,11 +32,11 @@ func CommandHandler(s *discordgo.Session, m *discordgo.MessageCreate) {
 			}
 
 			if err1 == nil && err2 == nil {
-				command.DnDRoll(n, d, b, s, m)
+				command.Roll(n, d, b, s, m)
 			}
 		case "help":
 			command.Help(s, m)
-		case default:
+		default:
 			command.Help(s, m)
 		}
 
