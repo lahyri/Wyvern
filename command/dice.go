@@ -1,6 +1,7 @@
 package command
 
 import (
+	"fmt"
 	"math/rand"
 	"strconv"
 
@@ -28,5 +29,7 @@ func Roll(n, d, b int, s *discordgo.Session, m *discordgo.MessageCreate) {
 	}
 
 	result += " = " + strconv.Itoa(total)
+	fmt.Println(m.ChannelID)
+
 	s.ChannelMessageSend(m.ChannelID, result)
 }

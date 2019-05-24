@@ -2,6 +2,7 @@ package command
 
 import (
 	"bufio"
+	"fmt"
 	"log"
 	"os"
 
@@ -22,6 +23,7 @@ func Help(s *discordgo.Session, m *discordgo.MessageCreate) {
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		s.ChannelMessageSend(m.ChannelID, scanner.Text())
+		fmt.Println(scanner.Text())
 	}
 
 	if err := scanner.Err(); err != nil {

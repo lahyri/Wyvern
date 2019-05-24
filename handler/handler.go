@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"fmt"
 	"strconv"
 	"strings"
 
@@ -17,18 +18,19 @@ func CommandHandler(s *discordgo.Session, m *discordgo.MessageCreate) {
 	if m.Author.ID == s.State.User.ID {
 		return
 	}
+	fmt.Println(m.Content)
 	// Detects the "!" to see if the message is a command
-	if m.Content[:1] == "!" {
+	if m.Content[:3] == "dnd" {
 		fullCommand := strings.Split(m.Content, " ")
-		method := fullCommand[0][1:]
+		method := fullCommand[1]
 
 		switch method {
 		case "r":
-			n, err1 := strconv.Atoi(fullCommand[1])
-			d, err2 := strconv.Atoi(fullCommand[2])
+			n, err1 := strconv.Atoi(fullCommand[2])
+			d, err2 := strconv.Atoi(fullCommand[3])
 			b := 0
-			if len(fullCommand) >= 4 {
-				b, _ = strconv.Atoi(fullCommand[3])
+			if len(fullCommand) >= 5 {
+				b, _ = strconv.Atoi(fullCommand[4])
 			}
 
 			if err1 == nil && err2 == nil {
