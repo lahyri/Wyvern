@@ -1,5 +1,6 @@
 # Wyvern
-###This is a Discord Bot specially crafted as a DnD compendium/helper
+
+### This is a Discord Bot specially crafted as a DnD compendium/helper
 
 ## Installing
 

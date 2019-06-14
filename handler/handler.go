@@ -36,6 +36,10 @@ func CommandHandler(s *discordgo.Session, m *discordgo.MessageCreate) {
 			}
 		case "help":
 			command.Help(s, m)
+		case "class":
+			command.GetClass(s, m, fullCommand[1])
+		case "spell":
+			command.GetSpell(s, m, fullCommand[1])
 		default:
 			command.Help(s, m)
 		}
